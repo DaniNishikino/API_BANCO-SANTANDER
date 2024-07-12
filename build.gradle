@@ -28,6 +28,11 @@ dependencies {
     implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.6.0'
 
 }
+tasks.jar{
+    manifest {
+        attributes["Main-Class"] = "dio.apisantander1.ApiSantander1Application"
+    }
+}
 
 tasks.named('test') {
     useJUnitPlatform()
